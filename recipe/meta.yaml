@@ -29,6 +29,7 @@ requirements:
   host:
     - r-base
     - r-curl
+    - r-gstat
     - r-lubridate
     - r-ncdf4
     - r-sf
@@ -37,6 +38,7 @@ requirements:
   run:
     - r-base
     - r-curl
+    - r-gstat
     - r-lubridate
     - r-ncdf4
     - r-sf
