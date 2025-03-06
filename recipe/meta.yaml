@@ -51,9 +51,14 @@ requirements:
 test:
   requires:
     - r-codetools
+    - r-testthat
+  source_files:
+    - tests/
   commands:
-    - $R -e "library('pastclim')"           # [not win]
-    - "\"%R%\" -e \"library('pastclim')\""  # [win]
+    - $R -e "library('pastclim')"                                                     # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"           # [not win]
+    - "\"%R%\" -e \"library('pastclim')\""                                            # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
 
 about:
   home: https://evolecolgroup.github.io/pastclim/
